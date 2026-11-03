@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff3b3b"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="16" y1="4" x2="16" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffd5d5"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- App-icon background -->
+  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
+
+  <!-- Inner glow rim -->
+  <rect x="1" y="1" width="30" height="30" rx="7.2"
+        fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+  <!-- Shield body -->
+  <path d="M16 4L7 8v7.5C7 21.8 11 27 16 28.5 21 27 25 21.8 25 15.5V8L16 4Z"
+        fill="url(#shield)" filter="url(#glow)"/>
+
+  <!-- Play triangle (YouTube-style, dark red for contrast) -->
+  <polygon points="13.5,12.5 22,16.5 13.5,20.5" fill="#c53030"/>
+
+  <!-- Subtle highlight on shield top -->
+  <path d="M16 5.5L8.2 9v6.5" fill="none"
+        stroke="rgba(255,255,255,0.35)" stroke-width="0.8"
+        stroke-linecap="round"/>
+</svg>
